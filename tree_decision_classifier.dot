@@ -1,0 +1,37 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+graph [ranksep=equally, splines=polyline] ;
+0 [label="nr.employed <= 5087.65\ngini = 0.199\nsamples = 100.0%\nvalue = [0.888, 0.112]\nclass = NotSubscribe", fillcolor="#e89152"] ;
+1 [label="poutcome_success <= 0.5\ngini = 0.493\nsamples = 12.0%\nvalue = [0.557, 0.443]\nclass = NotSubscribe", fillcolor="#fae5d6"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="contact_telephone <= 0.5\ngini = 0.462\nsamples = 9.3%\nvalue = [0.638, 0.362]\nclass = NotSubscribe", fillcolor="#f4c8a9"] ;
+1 -> 2 ;
+3 [label="gini = 0.475\nsamples = 7.8%\nvalue = [0.611, 0.389]\nclass = NotSubscribe", fillcolor="#f6d1b7"] ;
+2 -> 3 ;
+4 [label="gini = 0.349\nsamples = 1.5%\nvalue = [0.774, 0.226]\nclass = NotSubscribe", fillcolor="#eda673"] ;
+2 -> 4 ;
+5 [label="day_of_week_mon <= 0.5\ngini = 0.398\nsamples = 2.7%\nvalue = [0.274, 0.726]\nclass = Subscribe", fillcolor="#84c2ef"] ;
+1 -> 5 ;
+6 [label="gini = 0.353\nsamples = 2.1%\nvalue = [0.229, 0.771]\nclass = Subscribe", fillcolor="#74baed"] ;
+5 -> 6 ;
+7 [label="gini = 0.495\nsamples = 0.5%\nvalue = [0.452, 0.548]\nclass = Subscribe", fillcolor="#dceefa"] ;
+5 -> 7 ;
+8 [label="cons.conf.idx <= -46.65\ngini = 0.125\nsamples = 88.0%\nvalue = [0.933, 0.067]\nclass = NotSubscribe", fillcolor="#e78a47"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="euribor3m <= 1.368\ngini = 0.328\nsamples = 6.7%\nvalue = [0.793, 0.207]\nclass = NotSubscribe", fillcolor="#eca26d"] ;
+8 -> 9 ;
+10 [label="gini = 0.497\nsamples = 0.8%\nvalue = [0.537, 0.463]\nclass = NotSubscribe", fillcolor="#fbeee4"] ;
+9 -> 10 ;
+11 [label="gini = 0.288\nsamples = 6.0%\nvalue = [0.826, 0.174]\nclass = NotSubscribe", fillcolor="#ea9c63"] ;
+9 -> 11 ;
+12 [label="month_oct <= 0.5\ngini = 0.105\nsamples = 81.3%\nvalue = [0.944, 0.056]\nclass = NotSubscribe", fillcolor="#e78845"] ;
+8 -> 12 ;
+13 [label="gini = 0.103\nsamples = 81.1%\nvalue = [0.946, 0.054]\nclass = NotSubscribe", fillcolor="#e68844"] ;
+12 -> 13 ;
+14 [label="gini = 0.478\nsamples = 0.2%\nvalue = [0.396, 0.604]\nclass = Subscribe", fillcolor="#bbddf6"] ;
+12 -> 14 ;
+{rank=same ; 0} ;
+{rank=same ; 1; 8} ;
+{rank=same ; 2; 5; 9; 12} ;
+{rank=same ; 3; 4; 6; 7; 10; 11; 13; 14} ;
+}
